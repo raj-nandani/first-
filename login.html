@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            box-sizing:border-box;
+            font-family:"poppins",sans-serif;
+        }
+
+       
+        body{
+            background: url(clgimage.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            /*min-height:100vh;*/
+        }
+        .wrapper{
+        width:430px;
+        height:400px;
+        background: transparent;
+        color:#fff;
+        border-radius: 12px;
+        padding: 30px 40px ;
+        border:none;
+            outline:none;
+            border:2px solid rgba(255,255,255,0.2);
+            position: absolute;
+            top:50%;
+            left:50%;
+        transform: translate(-50%,-50%);
+        }
+
+        .wrapper h1{
+            font-size:36px;
+            text-align:center;
+        }
+
+        .wrapper .input-box{
+            position: relative;
+            width:80%;
+            height:50px;
+            margin:30px;
+        }
+
+        .input-box input{
+            width:100%;
+            height:100%;
+            background: transparent;
+            border:none;
+            outline:none;
+            border:2px solid rgba(255,255,255,0.2);
+            border-radius: 40px;
+            font-size:16px;
+            color:#fff;
+            padding:20px 45px 20px 20px;
+        }
+
+        .input-box input::placeholder{
+        color:#fff;
+        }
+
+        .input-box i{
+            position:absolute;
+            right:20px;
+            top:30%;
+            transform:translate(-50%);
+            font-size:20px;
+    
+        }
+        .wrapper .remember-forgot{
+            display:flex;
+            justify-content: space-around;
+            font-size: 14.5px;
+            margin:-15px 0 15px;
+        }
+
+        .remember-forgot label input{
+            accent-color:#fff;
+            margin-right:3px;
+        }
+
+        .remember-forgot a{
+            color:#fff;
+            text-decoration: none;
+            font-size: 14.5px;
+
+        }
+        .remember-forgot a:hover{
+            text-decoration: underline;
+        }
+        .wrapper .btn{
+            width:100%;
+            height:45px;
+            background:#fff;
+            border:none;
+            outline:none;
+            border-radius:40px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            font-size: 16px;
+            color:#333;
+            font-weight:600;
+                }
+
+                .parent{
+                    width : 100%;
+                    height:100vh;
+                }
+                #for{
+            margin-right: 0px;
+         }
+
+         .header{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            padding:1.3rem 10%;
+            background:rgba(0,0,0,0.1);
+            backdrop-filter:blur(50px);
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+         }
+
+         .logo{
+            font-size:2rem;
+            color:#fff;
+            text-decoration:none;
+            font-weight: 700;
+         }
+
+         .navbar a{
+            font-size:1.15rem;
+            color:#fff;
+            text-decoration: none;
+            font-weight:500;
+            margin-left:2.5rem;
+         }
+         .icons{
+            font-size:2.8rem ;
+            color:#fff;
+            cursor: pointer;
+            display:none;
+
+        }
+
+
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+   
+    <header class="header">
+          <a href="#" class="logo">Sports 2024</a>
+          <label for="" class="icons">
+
+           <i class='bx bx-menu'></i>
+          </label>
+
+        <nav class="navbar">
+            <a  href="/home.html">Home</a>
+            <a  href="/login.html">Login</a>
+            <a href="/content.html">Content</a>
+            
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact us</a>   
+        </nav>
+    </header>
+   
+        
+   
+<div class="parent">
+   <div class="wrapper"> 
+    <form action="">
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" placeholder="username" required>
+            <i class='bx bxs-user' ></i>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="password" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember Me</label>
+            <a href= "#" id="for">Forget Password</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+         </form>
+   </div>
+   </div>
+   </body>
+</html>
