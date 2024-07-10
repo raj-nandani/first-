@@ -43,11 +43,11 @@ function displayRecipes() {
 	// Create div to display the individual recipe, for each recipe
     recipeDiv.innerHTML = `
       <h3>${recipe.name}</h3>
-      <p><strong>Ingredients:</strong></p>
+      <p><strong>Details :</strong></p>
       <ul>
         ${recipe.ingredients.map(ingr => `<li>${ingr}</li>`).join('')}
       </ul>
-      <p><strong>Method:</strong></p>
+      <p><strong>Sports name:</strong></p>
       <p>${recipe.method}</p>
       <button class="delete-button" data-index="${index}">Delete</button>`;
     recipeDiv.classList.add('recipe');
@@ -83,11 +83,11 @@ function search(query) {
     const recipeEl = document.createElement('div');
     recipeEl.innerHTML = `
       <h3>${recipe.name}</h3>
-      <p><strong>Ingredients:</strong></p>
+      <p><strong>Details :</strong></p>
       <ul>
         ${recipe.ingredients.map(ingr => `<li>${ingr}</li>`).join('')}
       </ul>
-      <p><strong>Method:</strong></p>
+      <p><strong>Sports name:</strong></p>
       <p>${recipe.method}</p>
       <button class="delete-button" data-index="${recipes.indexOf(recipe)}">
 		Delete
