@@ -40,10 +40,122 @@
             background-size: cover;
             background-position: center;
             min-height: 100vh;
+            color:#fff;
          }
+
+         .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 150px 5%;
+}
+
+.left-column {
+  width: 25%;
+}
+
+.right-column {
+  width: 55%;
+}
+
+/* Styling for the Add Recipes form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"], textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #669BBc;
+  width: 100%;
+  box-sizing: border-box;
+  background-color:#FDF0D5;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: #362B48;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling for list of recipes */
+#recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+#no-recipes {
+    display: flex;
+    background-color: #FFCCCC;
+    padding: 20px;
+    border-radius: 8px;	
+	margin-top: 44px;
+}
+
+/* styling for single recipe div */
+.recipe {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.recipe h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.recipe ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recipe ul li {
+  margin-bottom: 5px;
+}
+
+/* Delete button styling */
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Search label styling */
+label[for="search-box"] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.mainbody{
+            height: 100vh;
+            width:100vw;
+            background: rgba(0,0,0,0.75);
+           
+         }
+
      </style>
 </head>
 <body>
+    <div class="mainbody">
     <header class="header">
         <a href="#" class="logo">Sports 2024</a>
         <label for="" class="icons">
@@ -60,5 +172,37 @@
           <a href="/contact.html">Contact us</a>   
       </nav>
   </header>
+
+
+  <div class="container">
+    <!-- Add recipes form -->
+    <div class="left-column">
+     <h3>Add Players Name With Games</h3>
+     <form>
+       <label for="recipe-name">Name :</label>
+       <input type="text" id="recipe-name" required>
+       <br>
+       <label for="recipe-ingredients">Details :</label>
+       <textarea id="recipe-ingredients" rows="5"  required></textarea>
+       <br>
+       <label for="recipe-method">Sports Name :</label>
+       <textarea id="recipe-method" rows="5" required></textarea>
+       <br>
+       <button type="submit">Add Players</button>
+     </form>
+   </div>
+   <!-- Search bar/view recipes list -->
+   <div class="right-column">
+     <div id="search-section">
+       <h3>Player's List</h3>
+       <label for="search-box">Search:</label>
+       <input type="text" id="search-box">
+     </div>
+     <div id="recipe-list"></div>
+     <div id="no-recipes">No players entered yet.</div>
+   </div>
+ </div>
+ </div>
+ <script src="script.js"></script>
 </body>
 </html>
